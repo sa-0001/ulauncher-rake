@@ -1,0 +1,26 @@
+{
+	"name": "Rake extension",
+	"description": "Run a Rake task (found in `~/Rakefile`)",
+	"developer_name": "sa-0001",
+	"required_api_version": "^2.0.0",
+	"icon": "images/icon.png",
+	"options": {
+		"query_debounce": 0.1
+	},
+	"preferences": [
+		{
+			"id": "keyword",
+			"type": "keyword",
+			"name": "Rake",
+			"description": "Rake extension",
+			"default_value": "rake"
+		},
+		{
+			"id": "command",
+			"type": "input",
+			"name": "Rake terminal command",
+			"description": "Run this command, replacing token $TASK with the Rake task name.",
+			"default_value": "gnome-terminal -e \"bash -c \\\"rake $TASK ; exec bash\\\"\""
+		}
+	]
+}
